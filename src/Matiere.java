@@ -33,6 +33,10 @@ public class Matiere {
         this.listeCours = listeCours;
     }
 
+    public void ajouteCours(Cours cours){
+        this.listeCours.add(cours);
+    }
+
 
 
 

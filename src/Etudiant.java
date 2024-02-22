@@ -62,6 +62,14 @@ public class Etudiant {
         this.bulletin = bulletin;
     }
 
+    public void ajouteGroupe(Groupe group){
+        this.appartenanceGroupe.add(group);
+    }
+
+    public void ajouteNote(Note note){
+        this.bulletin.add(note);
+    }
+
 
 
 

@@ -6,18 +6,28 @@ public class Etudiant {
     private String nom;
     private String prenom;
     private List<Groupe> appartenanceGroupe;
+    private List<Note> bulletin;
 
 
     public Etudiant(String nom, String prenom) {
         this.nom = nom;
         this.prenom = prenom;
         this.appartenanceGroupe = new ArrayList<>();
+        this.bulletin = new ArrayList<>();
     }
 
     public Etudiant(String nom, String prenom, List<Groupe> appartenanceGroupe) {
         this.nom = nom;
         this.prenom = prenom;
         this.appartenanceGroupe = appartenanceGroupe;
+        this.bulletin = new ArrayList<>();
+    }
+
+    public Etudiant(String nom, String prenom, List<Groupe> appartenanceGroupe, List<Note> bullList) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.appartenanceGroupe = appartenanceGroupe;
+        this.bulletin = bullList;
     }
 
     public String getNom() {
@@ -43,6 +53,15 @@ public class Etudiant {
     public void setAppartenanceGroupe(List<Groupe> appartenanceGroupe) {
         this.appartenanceGroupe = appartenanceGroupe;
     }
+
+    public List<Note> getBulletin() {
+        return this.bulletin;
+    }
+
+    public void setBulletin(List<Note> bulletin) {
+        this.bulletin = bulletin;
+    }
+
 
 
 

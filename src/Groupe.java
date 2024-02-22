@@ -5,16 +5,25 @@ import java.util.Objects;
 public class Groupe {
     private String nomGroupe;
     private List<Etudiant> listeEtudiantsGroupe;
+    public List<Cours> listeCours;
 
 
     public Groupe(String nomGroupe) {
         this.nomGroupe = nomGroupe;
         this.listeEtudiantsGroupe = new ArrayList<>();
+        this.listeCours = new ArrayList<>();
     }
 
     public Groupe(String nomGroupe, List<Etudiant> listeEtudiantsGroupe) {
         this.nomGroupe = nomGroupe;
         this.listeEtudiantsGroupe = listeEtudiantsGroupe;
+        this.listeCours = new ArrayList<>();
+    }
+
+    public Groupe(String nomGroupe, List<Etudiant> listeEtudiantsGroupe, List<Cours> listeCours) {
+        this.nomGroupe = nomGroupe;
+        this.listeEtudiantsGroupe = listeEtudiantsGroupe;
+        this.listeCours = listeCours;
     }
 
     public String getNomGroupe() {
@@ -33,6 +42,21 @@ public class Groupe {
         this.listeEtudiantsGroupe = listeEtudiantsGroupe;
     }
 
+    public List<Cours> getListeCours() {
+        return this.listeCours;
+    }
+
+    public void setListeCours(List<Cours> listeCours) {
+        this.listeCours = listeCours;
+    }  
+
+    public void ajouteEtudiant(Etudiant etud){
+        this.listeEtudiantsGroupe.add(etud);
+    }
+
+    public void ajouteCours(Cours cours){
+        this.listeCours.add(cours);
+    }
 
 
 

@@ -13,6 +13,16 @@ public class User {
         this.role = role;
         this.lesCours = new ArrayList<>();
 
+    }
+
+	public String getRole() {
+		return this.role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
 	public = getNom() {
 		return this.nom;
 	}
@@ -21,6 +31,6 @@ public class User {
 		this.nom = nom;
 	}
 
-    }
+
 
 }

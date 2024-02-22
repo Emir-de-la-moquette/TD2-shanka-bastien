@@ -11,8 +11,31 @@ public class Horaire {
     public Horaire(LocalDateTime horaireDebut, LocalDateTime horaireFin) {
         this.horaireDebut = horaireDebut;
         this.horaireFin = horaireFin;
-        this.lesSalles = new ArrayList<>();
-        this.lesCours = new ArrayList<>();
+    }
+
+	public = getHoraireDebut() {
+		return this.horaireDebut;
+	}
+
+	public void setHoraireDebut(LocalDateTime horaireDebut) {
+		this.horaireDebut = horaireDebut;
+	}
+
+	public = getHoraireFin() {
+		return this.horaireFin;
+	}
+
+	public void setHoraireFin(LocalDateTime horaireFin) {
+		this.horaireFin = horaireFin;
+	}
+
+    public ajouteCours(Cours cours) {
+        this.lesCours.add(cours);
+    }
+
+
+    public ajouteSalle(Salle salle) {
+        this.lesSalles.add(salle);
     }
 
 

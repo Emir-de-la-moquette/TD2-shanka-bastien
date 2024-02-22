@@ -9,6 +9,17 @@ public class Salle {
         this.nom = nom;
         this.horaire = horaire;
 
+    }
+
+	public = getHoraire() {
+		return this.horaire;
+	}
+
+	public void setHoraire(Horaire horaire) {
+		this.horaire = horaire;
+	}
+
+
 	public = getNom() {
 		return this.nom;
 	}
@@ -17,6 +28,6 @@ public class Salle {
 		this.nom = nom;
 	}
 
-    }
+
     
 }

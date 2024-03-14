@@ -23,7 +23,7 @@ public class User {
 		this.role = role;
 	}
 
-	public = getNom() {
+	public String getNom() {
 		return this.nom;
 	}
 

@@ -1,5 +1,4 @@
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Horaire {
@@ -13,7 +12,7 @@ public class Horaire {
         this.horaireFin = horaireFin;
     }
 
-	public = getHoraireDebut() {
+	public LocalDateTime getHoraireDebut() {
 		return this.horaireDebut;
 	}
 
@@ -21,7 +20,7 @@ public class Horaire {
 		this.horaireDebut = horaireDebut;
 	}
 
-	public = getHoraireFin() {
+	public LocalDateTime getHoraireFin() {
 		return this.horaireFin;
 	}
 
@@ -29,12 +28,12 @@ public class Horaire {
 		this.horaireFin = horaireFin;
 	}
 
-    public ajouteCours(Cours cours) {
+    public void ajouteCours(Cours cours) {
         this.lesCours.add(cours);
     }
 
 
-    public ajouteSalle(Salle salle) {
+    public void ajouteSalle(Salle salle) {
         this.lesSalles.add(salle);
     }
 

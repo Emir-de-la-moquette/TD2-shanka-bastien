@@ -11,7 +11,7 @@ public class Salle {
 
     }
 
-	public = getHoraire() {
+	public Horaire getHoraire() {
 		return this.horaire;
 	}
 
@@ -20,7 +20,7 @@ public class Salle {
 	}
 
 
-	public = getNom() {
+	public String getNom() {
 		return this.nom;
 	}
 

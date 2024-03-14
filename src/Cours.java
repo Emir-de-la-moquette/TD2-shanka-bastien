@@ -9,31 +9,31 @@ public class Cours{
 
 
     public Cours(Horaire horaire) {
-        this.horaire = horaire;
+        this.horaires = horaire;
         this.lesGroupes = new ArrayList<>();
         this.lesUtilisateur = new ArrayList<>();
         this.lesMatieres = new ArrayList<>();
     }
 
-	public = getHoraire() {
-		return this.horaire;
+	public Horaire getHoraire() {
+		return this.horaires;
 	}
 
 	public void setHoraire(Horaire horaire) {
-		this.horaire = horaire;
+		this.horaires = horaire;
 	}
 
-    public ajouteGroupe(Gourpe groupe) {
+    public void ajouteGroupe(Groupe groupe) {
         this.lesGroupes.add(groupe);
     }
 
 
-    public ajouteUser(User user) {
+    public void ajouteUser(User user) {
         this.lesUtilisateur.add(user);
     }
 
 
-    public ajouteMatière(Matriere matiere) {
+    public void ajouteMatière(Matiere matiere) {
         this.lesMatieres.add(matiere);
     
     }

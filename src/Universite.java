@@ -9,25 +9,29 @@ public class Universite {
     private List<Note> listeNotations;
     private List<Cours> listeCours;
     private List<Groupe> listeGroupes;
+    private List<User> listePersonnel;
     
     public Universite(String nom) {
         this.nom = nom;
         this.listeEtudiants = new ArrayList<>();
         this.listeNotations = new ArrayList<>();
         this.listeCours = new ArrayList<>();
+        this.listePersonnel = new ArrayList<>();
     }
 
-    public Universite(String nom, List<Etudiant> listeEtudiants) {
+    public Universite(String nom, List<Etudiant> listeEtudiants, List<User> listePersonnel) {
         this.nom = nom;
         this.listeEtudiants = listeEtudiants;
         this.listeNotations = new ArrayList<>();
         this.listeCours = new ArrayList<>();
+        this.listePersonnel = listePersonnel;
     }
-    public Universite(String nom, List<Etudiant> listeEtudiants, List<Cours> listeCours) {
+    public Universite(String nom, List<Etudiant> listeEtudiants, List<User> listePersonnel, List<Cours> listeCours) {
         this.nom = nom;
         this.listeEtudiants = listeEtudiants;
         this.listeCours = listeCours;
         this.listeNotations = new ArrayList<>();
+        this.listePersonnel = listePersonnel;
     }
 
 
@@ -100,6 +104,55 @@ public class Universite {
             listeGroupes.add(groupe);
     }
 
+/* LISTE DU PERSONNEL */
+
+public List<User> getListePersonnel() {
+    return this.listePersonnel;
+}
+
+public void setListePersonnel(List<User> listePersonnel) {
+    this.listePersonnel = listePersonnel;
+}
+
+public void ajouterPersonnel(User user){
+    if (!this.listePersonnel.contains(user))
+        listePersonnel.add(user);
+}
+
+
+
+public void toCSV(){
+    List<String> notesCSV = new ArrayList<>();
+    List<String> etudCSV = new ArrayList<>();
+    List<String> coursCSV = new ArrayList<>();
+    List<String> groupeCSV = new ArrayList<>();
+    List<String> persoCSV = new ArrayList<>();
+    for (Note note : this.listeNotations){
+        notesCSV.add(note.toString());
+    }
+    for (User personnel : this.listePersonnel){
+        persoCSV.add(personnel.toString());
+    }
+    for (Etudiant etud : this.listeEtudiants){
+        etudCSV.add(etud.toString());
+    }
+    for (Cours cours : this.listeCours){
+        coursCSV.add(cours.toString());
+    }
+    for (Groupe groupe : this.listeGroupes){
+        groupeCSV.add(groupe.toString());
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
     
     @Override
@@ -118,6 +171,8 @@ public class Universite {
         return Objects.hash(nom, listeEtudiants);
     }
 
+
+    
     
     
 }

@@ -75,13 +75,15 @@ public class Groupe {
     }
 
 
+
     @Override
     public String toString() {
         return "{" +
             " nomGroupe='" + getNomGroupe() + "'" +
             ", listeEtudiantsGroupe='" + getListeEtudiantsGroupe() + "'" +
+            ", listeCours='" + getListeCours() + "'" +
             "}";
-    }
+    }    
     
 
 

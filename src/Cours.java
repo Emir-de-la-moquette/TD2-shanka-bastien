@@ -48,5 +48,27 @@ public class Cours{
     
     }
 
+    public List<Groupe> getLesGroupes() {
+        return this.lesGroupes;
+    }
+
+    public List<Matiere> getLesMatieres() {
+        return this.lesMatieres;
+    }
+
+
+
+
+
+    @Override
+    public String toString() {
+        return "{" +
+            " horaire='" + getHoraire() + "'" +
+            ", lesGroupes='" + getLesGroupes() + "'" +
+            ", prof='" + getProf() + "'" +
+            ", lesMatieres='" + getLesMatieres() + "'" +
+            "}";
+    }
+
 
 }

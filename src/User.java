@@ -31,6 +31,9 @@ public class User {
 		this.nom = nom;
 	}
 
+	public void ajouteCours(Cours cours){
+        this.lesCours.add(cours);
+    }
 
 
 }

@@ -6,21 +6,24 @@ public class Note {
     private double valeurMax;
     private String nomControle;
     private List<Matiere> typeControle;
+    private Etudiant etudEvaluee;
 
 
-    public Note(double note, double valeurMax, String nomControle) {
+    public Note(double note, double valeurMax, String nomControle, Etudiant etud) {
         this.note = note;
         this.valeurMax = valeurMax;
         this.nomControle = nomControle;
         this.typeControle = new ArrayList<>();
+        this.etudEvaluee = etud;
     }
 
 
-    public Note(double note, double valeurMax, String nomControle, List<Matiere> typeControle) {
+    public Note(double note, double valeurMax, String nomControle, List<Matiere> typeControle, Etudiant etud) {
         this.note = note;
         this.valeurMax = valeurMax;
         this.nomControle = nomControle;
         this.typeControle = typeControle;
+        this.etudEvaluee = etud;
     }
 
     public double getNote() {
@@ -55,6 +58,11 @@ public class Note {
         this.typeControle = typeControle;
     }
 
+    public Etudiant getEtudiant(){
+        return this.etudEvaluee;
+    }
+
+
 
 
 
@@ -67,8 +75,10 @@ public class Note {
             ", valeurMax='" + getValeurMax() + "'" +
             ", nomControle='" + getNomControle() + "'" +
             ", typeControle='" + getTypeControle() + "'" +
+            ", etudEvaluee='" + getEtudiant() + "'" +
             "}";
     }
+    
 
 
 

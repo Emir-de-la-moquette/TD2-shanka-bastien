@@ -1,4 +1,5 @@
 import java.util.List;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class Note {
@@ -7,23 +8,26 @@ public class Note {
     private String nomControle;
     private List<Matiere> typeControle;
     private Etudiant etudEvaluee;
+    private LocalDateTime dateControle;
 
 
-    public Note(double note, double valeurMax, String nomControle, Etudiant etud) {
+    public Note(double note, double valeurMax, String nomControle, Etudiant etud, LocalDateTime date) {
         this.note = note;
         this.valeurMax = valeurMax;
         this.nomControle = nomControle;
         this.typeControle = new ArrayList<>();
         this.etudEvaluee = etud;
+        this.dateControle = date;
     }
 
 
-    public Note(double note, double valeurMax, String nomControle, List<Matiere> typeControle, Etudiant etud) {
+    public Note(double note, double valeurMax, String nomControle, List<Matiere> typeControle, Etudiant etud, LocalDateTime date) {
         this.note = note;
         this.valeurMax = valeurMax;
         this.nomControle = nomControle;
         this.typeControle = typeControle;
         this.etudEvaluee = etud;
+        this.dateControle = date;
     }
 
     public double getNote() {
@@ -62,6 +66,13 @@ public class Note {
         return this.etudEvaluee;
     }
 
+    public LocalDateTime getDateControle(){
+        return this.dateControle;
+    }
+
+    public void changeDateControle(LocalDateTime newDate){
+        this.dateControle = newDate;
+    }
 
 
 

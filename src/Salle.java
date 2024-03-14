@@ -1,12 +1,15 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class Salle {
     private String nom;
     private Horaire horaire;
+	private List<Cours> listeCours;
 
     public Salle(String nom, Horaire horaire) {
         this.nom = nom;
         this.horaire = horaire;
-
+		this.listeCours = new ArrayList<>();
     }
 
 	public Horaire getHoraire() {
@@ -26,6 +29,10 @@ public class Salle {
 		this.nom = nom;
 	}
 
-
+	
+    public void ajouterCours(Cours cours){
+        if (!this.listeCours.contains(cours))
+            listeCours.add(cours);
+    }
     
 }

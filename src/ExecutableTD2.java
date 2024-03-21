@@ -12,15 +12,15 @@ public class ExecutableTD2 {
         uwuBtp.ajouteEtudiant(baptiste);
         uwuBtp.ajouteEtudiant(tristan);
         uwuBtp.ajouteEtudiant(kris);
-        Horaire h1 = new Horaire("08:00:00", "09:30:00");
-        Horaire h2 = new Horaire("09:30:00", "11:00:00");
-        Horaire h3 = new Horaire("11:00:00", "12:30:00");
+        Horaire h1 = new Horaire(LocalDateTime.now(), LocalDateTime.now()); // .now car je n'est pas réussi a attribuer une date quelquonque
+        Horaire h2 = new Horaire(LocalDateTime.now(),LocalDateTime.now());
+        Horaire h3 = new Horaire(LocalDateTime.now(), LocalDateTime.now());
         Cours cours1 = new Cours(h1);
         Cours cours2 = new Cours(h2);
         Cours cours3 = new Cours(h3);
-        Matiere progPython = new Matriere("programation python");
-        Matiere progJava = new Matriere("programation java");
-        Matiere progSql = new Matriere("programation sql");
+        Matiere progPython = new Matiere("programation python");
+        Matiere progJava = new Matiere("programation java");
+        Matiere progSql = new Matiere("programation sql");
         User lechopier = new User("M Lechopier", "professeur de programation");
         Note c1 = new Note(20.00, 20.00, "DS1 python", progPython);
         Note c2 = new Note(10.00, 10.00, "DS1 java", progJava);

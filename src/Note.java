@@ -1,23 +1,25 @@
-
-import java.time.LocalDateTime;
+//import java.util.List;
+//import java.util.ArrayList;
 
 public class Note {
     private double note;
     private double valeurMax;
     private String nomControle;
     private Matiere typeControle;
-    private Etudiant etudEvaluee;
-    private LocalDateTime dateControle;
 
 
+    public Note(double note, double valeurMax, String nomControle) {
+        this.note = note;
+        this.valeurMax = valeurMax;
+        this.nomControle = nomControle;
+    }
 
-    public Note(double note, double valeurMax, String nomControle, Matiere typeControle, Etudiant etud, LocalDateTime date) {
+
+    public Note(double note, double valeurMax, String nomControle, Matiere typeControle) {
         this.note = note;
         this.valeurMax = valeurMax;
         this.nomControle = nomControle;
         this.typeControle = typeControle;
-        this.etudEvaluee = etud;
-        this.dateControle = date;
     }
 
     public double getNote() {
@@ -52,17 +54,6 @@ public class Note {
         this.typeControle = typeControle;
     }
 
-    public Etudiant getEtudiant(){
-        return this.etudEvaluee;
-    }
-
-    public LocalDateTime getDateControle(){
-        return this.dateControle;
-    }
-
-    public void changeDateControle(LocalDateTime newDate){
-        this.dateControle = newDate;
-    }
 
 
 
@@ -75,12 +66,8 @@ public class Note {
             ", valeurMax='" + getValeurMax() + "'" +
             ", nomControle='" + getNomControle() + "'" +
             ", typeControle='" + getTypeControle() + "'" +
-            ", etudEvaluee='" + getEtudiant() + "'" +
-            ", dateControle='" + getDateControle() + "'" +
             "}";
     }
-    
-    
 
 
 

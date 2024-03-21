@@ -36,4 +36,18 @@ public class User {
     }
 
 
+
+	public List<Cours> getLesCours() {
+		return this.lesCours;
+	}
+
+	@Override
+	public String toString() {
+		return "{" +
+			" role='" + getRole() + "'" +
+			", nom='" + getNom() + "'" +
+			", lesCours='" + getLesCours() + "'" +
+			"}";
+	}
+
 }

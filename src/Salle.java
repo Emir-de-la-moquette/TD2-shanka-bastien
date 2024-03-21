@@ -6,7 +6,6 @@ public class Salle {
     public Salle(String nom, Horaire horaire) {
         this.nom = nom;
         this.horaire = horaire;
-
     }
 
 	public Horaire getHoraire() {
@@ -26,6 +25,8 @@ public class Salle {
 		this.nom = nom;
 	}
 
+	
 
+	
     
 }

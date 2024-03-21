@@ -1,26 +1,23 @@
-import java.util.List;
-import java.util.ArrayList;
+
+import java.time.LocalDateTime;
 
 public class Note {
     private double note;
     private double valeurMax;
     private String nomControle;
-    private List<Matiere> typeControle;
+    private Matiere typeControle;
+    private Etudiant etudEvaluee;
+    private LocalDateTime dateControle;
 
 
-    public Note(double note, double valeurMax, String nomControle) {
-        this.note = note;
-        this.valeurMax = valeurMax;
-        this.nomControle = nomControle;
-        this.typeControle = new ArrayList<>();
-    }
 
-
-    public Note(double note, double valeurMax, String nomControle, List<Matiere> typeControle) {
+    public Note(double note, double valeurMax, String nomControle, Matiere typeControle, Etudiant etud, LocalDateTime date) {
         this.note = note;
         this.valeurMax = valeurMax;
         this.nomControle = nomControle;
         this.typeControle = typeControle;
+        this.etudEvaluee = etud;
+        this.dateControle = date;
     }
 
     public double getNote() {
@@ -47,14 +44,25 @@ public class Note {
         this.nomControle = nomControle;
     }
 
-    public List<Matiere> getTypeControle() {
+    public Matiere getTypeControle() {
         return this.typeControle;
     }
 
-    public void setTypeControle(List<Matiere> typeControle) {
+    public void setTypeControle(Matiere typeControle) {
         this.typeControle = typeControle;
     }
 
+    public Etudiant getEtudiant(){
+        return this.etudEvaluee;
+    }
+
+    public LocalDateTime getDateControle(){
+        return this.dateControle;
+    }
+
+    public void changeDateControle(LocalDateTime newDate){
+        this.dateControle = newDate;
+    }
 
 
 
@@ -67,8 +75,12 @@ public class Note {
             ", valeurMax='" + getValeurMax() + "'" +
             ", nomControle='" + getNomControle() + "'" +
             ", typeControle='" + getTypeControle() + "'" +
+            ", etudEvaluee='" + getEtudiant() + "'" +
+            ", dateControle='" + getDateControle() + "'" +
             "}";
     }
+    
+    
 
 
 
